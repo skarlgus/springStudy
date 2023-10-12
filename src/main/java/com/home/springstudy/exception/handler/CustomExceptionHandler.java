@@ -22,7 +22,9 @@ public class CustomExceptionHandler {
         CustomException error = new CustomException();
 
         error.setCustomResultCde("9999");
-        error.setCustomResultMsg("[exception] ::: custom");
+        error.setCustomResultMsg("커스텀 예외처리");
+
+        log.info("[exception] ::: custom ");
 
         return new ResponseEntity<>(error, HttpStatus.INTERNAL_SERVER_ERROR);
     }
